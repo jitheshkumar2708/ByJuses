@@ -28,10 +28,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     public List<NewsModel> list = new ArrayList<>();
     Context context;
 
+
     public interface RecyclerCallBack{
         void onItemClicked(List<NewsModel> list);
     }
     RecyclerCallBack callback;
+
     public class View_Holder extends RecyclerView.ViewHolder {
 
         public View view;
@@ -82,6 +84,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
         ((View_Holder) holder).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 //((ListActivity) context).openStories(dataList.get(index));
 
                 //((MainActivity) context).openNews(context, list.get(index).getUrl());
@@ -98,6 +102,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
 
 
                 Intent intent = new Intent(context, DescriptionActivity.class);
+                intent.putExtra("title",list.get(position).getTitle());
+                intent.putExtra("ImageUri",list.get(position).getUrlToImage());
+
                 // intent.putStringArrayListExtra("List",);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
@@ -134,7 +141,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     public void setList(List<NewsModel> list, Context context) {
         this.list = list;
         this.context = context;
-        // this.callback=callback;
+         this.callback=callback;
         notifyDataSetChanged();
     }
 

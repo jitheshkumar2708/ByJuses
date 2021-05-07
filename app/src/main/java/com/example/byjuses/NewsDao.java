@@ -1,6 +1,7 @@
 package com.example.byjuses;
 
 import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -9,7 +10,7 @@ import androidx.room.Update;
 import com.example.byjuses.Models.NewsModel;
 
 import java.util.List;
-
+@Dao
 public interface NewsDao {
 
     @Insert
