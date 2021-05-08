@@ -102,6 +102,8 @@ public class MyViewModel extends AndroidViewModel {
                 Log.d(TAG, "onError: " + e.getMessage());
             }
 
+
+
             @Override
             public void onComplete() {
 

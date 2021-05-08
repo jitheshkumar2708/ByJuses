@@ -4,6 +4,8 @@ package com.example.byjuses.Models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "newsTable")
 public class NewsModel {
 
@@ -15,8 +17,6 @@ public class NewsModel {
     private String url;
     private String urlToImage;
     private String publishedAt;
-
-
     private String name;
 
     public NewsModel(String author, String title, String description, String url, String urlToImage, String publishedAt,String name) {

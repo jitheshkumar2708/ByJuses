@@ -71,8 +71,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
 
         /*NewsModel currentNews = list.get(position);
         holder.date.setText(currentNews.getPublishedAt());*/
-
-        holder.date.setText(list.get(position).getPublishedAt());
+        String input = list.get(position).getPublishedAt();
+        String output = input.substring(0, 10);
+        holder.date.setText(output);
         // holder.time.setText(list.get(position).getPublishedAt());
         holder.title.setText(list.get(position).getTitle());
         holder.name.setText(list.get(position).getName());

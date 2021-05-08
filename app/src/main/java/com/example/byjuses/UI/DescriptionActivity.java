@@ -44,7 +44,7 @@ public class DescriptionActivity extends AppCompatActivity {
        drawerImage.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-
+             supportFinishAfterTransition();
 
            }
        });
