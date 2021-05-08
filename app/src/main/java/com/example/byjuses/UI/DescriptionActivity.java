@@ -22,8 +22,6 @@ public class DescriptionActivity extends AppCompatActivity {
     RecyclerAdapter recyclerAdapter;
     ImageView imageView,drawerImage;
     TextView textView;
-    List<NewsModel> list;
-
 
 
     @Override
@@ -37,8 +35,6 @@ public class DescriptionActivity extends AppCompatActivity {
           String s = getIntent().getStringExtra("title");
           String d=getIntent().getStringExtra("ImageUri");
 
-        //Bundle bundle = getIntent().getExtras();
-        //  list = Objects.requireNonNull(bundle).getParcelable("data");
 
         Picasso.get().load(d).
                 placeholder(R.drawable.ic_launcher_background).
@@ -48,6 +44,7 @@ public class DescriptionActivity extends AppCompatActivity {
        drawerImage.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+
 
            }
        });

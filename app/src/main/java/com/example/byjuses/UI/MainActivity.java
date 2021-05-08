@@ -2,13 +2,17 @@ package com.example.byjuses.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.byjuses.Adapter.RecyclerAdapter;
 import com.example.byjuses.Models.NewsModel;
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerAdapter adapter;
     //List<NewsModel> list = new ArrayList<>();
-
+   Context context;
     MyViewModel mViewModel;
 
     @Override
@@ -40,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView textView= (TextView) findViewById(R.id.toolbar_title);
 
+        Typeface roboto = Typeface.createFromAsset(this.getAssets(),
+                "font/RobotoSlab-Bold.ttf");
 
-        //toolbar.setTitle("HeadLines");
+        //use this.getAssets if you are calling from an Activity
+        textView.setTypeface(roboto);
 
-        //toolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimaryDark));
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
