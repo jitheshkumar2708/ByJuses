@@ -76,12 +76,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
         holder.date.setText(output);
         // holder.time.setText(list.get(position).getPublishedAt());
         holder.title.setText(list.get(position).getTitle());
-        holder.name.setText(list.get(position).getName());
+        holder.name.setText("CNN");
 
         Typeface roboto = Typeface.createFromAsset(context.getAssets(),
                 "font/RobotoSlab-Regular.ttf");
         //use this.getAssets if you are calling from an Activity
-        holder.name.setTypeface(roboto);
+        holder.title.setTypeface(roboto);
+
+        Typeface robo = Typeface.createFromAsset(context.getAssets(),
+                "font/RobotoSlab-Bold.ttf");
+        //use this.getAssets if you are calling from an Activity
+        holder.name.setTypeface(robo);
+
 
 
 
