@@ -105,6 +105,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
                 Intent intent = new Intent(context, DescriptionActivity.class);
                 intent.putExtra("title",list.get(position).getTitle());
                 intent.putExtra("ImageUri",list.get(position).getUrlToImage());
+                intent.putExtra("description",list.get(position).getDescription());
+                intent.putExtra("date",output);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

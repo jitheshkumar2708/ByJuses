@@ -19,7 +19,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/localEvents"
             android:layout_width="0dp"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
 
             android:layout_weight="10"
@@ -61,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginLeft="24dp"
+
 
                     android:text="CNN"
                     android:textColor="@color/white"
