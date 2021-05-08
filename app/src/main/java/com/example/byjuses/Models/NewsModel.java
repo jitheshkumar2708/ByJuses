@@ -4,15 +4,13 @@ package com.example.byjuses.Models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.io.Serializable;
-
 @Entity(tableName = "newsTable")
 public class NewsModel {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
-    private String author;
-    private String title;
+    private String  author;
+    private String  title;
     private String description;
     private String url;
     private String urlToImage;
