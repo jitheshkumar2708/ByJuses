@@ -13,25 +13,25 @@ public class DescriptionActivity extends AppCompatActivity {
    
     ImageView newsImage,arrowBackImage;
     TextView newHeadline,newsDescrption,newsTitle,newsDescriptionDate;
-
+    String title,image,descriptionNews,dateNews,newsName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
-        newsImage = findViewById(R.id.flag);
-        arrowBackImage = findViewById(R.id.flag1);
-        newHeadline = findViewById(R.id.descriptionText);
-        newsDescrption=findViewById(R.id.description_text);
-        newsTitle=findViewById(R.id.titleName);
-        newsDescriptionDate=findViewById(R.id.date_desc);
+        newsImage = findViewById(R.id.newsImage);
+        arrowBackImage = findViewById(R.id.arrowImage);
+        newHeadline = findViewById(R.id.newsHeadline);
+        newsDescrption=findViewById(R.id.newsDescription);
+        newsTitle=findViewById(R.id.newsName);
+        newsDescriptionDate=findViewById(R.id.newsDate);
 
-        String title = getIntent().getStringExtra("title");
-        String image=getIntent().getStringExtra("ImageUri");
-        String descriptionNews = getIntent().getStringExtra("description");
-        String dateNews = getIntent().getStringExtra("date");
-        String newsName= getIntent().getStringExtra("newsName");
+        title  = getIntent().getStringExtra("title");
+        image  = getIntent().getStringExtra("ImageUri");
+        descriptionNews = getIntent().getStringExtra("description");
+        dateNews = getIntent().getStringExtra("date");
+        newsName= getIntent().getStringExtra("newsName");
         Typeface roboto = Typeface.createFromAsset(this.getAssets(),
                 "font/RobotoSlab-Bold.ttf");
         

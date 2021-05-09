@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         Toolbar toolbar = findViewById(R.id.toolbar);
         TextView textView = findViewById(R.id.toolbar_title);
-
         //To make Text Type as RobotoSlab-Bold
         Typeface roboto = Typeface.createFromAsset(this.getAssets(),
                 "font/RobotoSlab-Bold.ttf");
