@@ -41,7 +41,6 @@ public class NewsRepository {
         new DeleteAllNewsAsyncTask(mNewsDao).execute();
     }
 
-
     private static class InsertAsyncTask extends AsyncTask<NewsModel, Void, Void> {
 
         private NewsDao mNewsDao;

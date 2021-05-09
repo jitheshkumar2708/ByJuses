@@ -24,7 +24,7 @@ public abstract class NewsRoomDB extends RoomDatabase {
     public static synchronized NewsRoomDB getInstance(Context context) {
 
         if (instance == null) {
-            Log.d(TAG, "myyygetInstance: " + "nulllllll");
+            Log.d(TAG, "mygetInstance: " + "null");
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     NewsRoomDB.class,
                     "News_database")
@@ -32,7 +32,7 @@ public abstract class NewsRoomDB extends RoomDatabase {
                     .addCallback(roomCallback)
                     .build();
         } else {
-            Log.d(TAG, "myyygetInstance: ");
+            Log.d(TAG, "mygetInstance: ");
         }
         return instance;
     }
@@ -66,8 +66,6 @@ public abstract class NewsRoomDB extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-
-            //mNewsDao.insert( null);
 
             return null;
         }

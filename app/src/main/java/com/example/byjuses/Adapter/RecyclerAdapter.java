@@ -41,8 +41,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
             newsName=  itemView.findViewById(R.id.titleHead);
 
         }
-
-
     }
 
 
@@ -56,12 +54,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     @Override
     public void onBindViewHolder(@NonNull View_Holder holder, int position) {
 
-        /*NewsModel currentNews = list.get(position);
-        holder.date.setText(currentNews.getPublishedAt());*/
         String input = list.get(position).getPublishedAt();
         String output = input.substring(0, 10);
         holder.newsDate.setText(output);
-        // holder.time.setText(list.get(position).getPublishedAt());
         holder.newsTitle.setText(list.get(position).getTitle());
         holder.newsName.setText("CNN");
 
@@ -76,22 +71,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
 
 
         Picasso.get().load(list.get(position).getUrlToImage()).
-                placeholder(R.drawable.ic_launcher_background).
+                placeholder(R.drawable.byjus).
                 into(holder.newsImage);
 
 
-        ((View_Holder) holder).view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        ((View_Holder) holder).view.setOnClickListener(v -> {
 
-                Intent intent = new Intent(context, DescriptionActivity.class);
-                intent.putExtra("title",list.get(position).getTitle());
-                intent.putExtra("ImageUri",list.get(position).getUrlToImage());
-                intent.putExtra("description",list.get(position).getDescription());
-                intent.putExtra("date",output);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-            }
+            Intent intent = new Intent(context, DescriptionActivity.class);
+            intent.putExtra("title",list.get(position).getTitle());
+            intent.putExtra("ImageUri",list.get(position).getUrlToImage());
+            intent.putExtra("description",list.get(position).getDescription());
+            intent.putExtra("date",output);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
         });
 
 

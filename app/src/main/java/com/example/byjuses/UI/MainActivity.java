@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         adapter = new RecyclerAdapter();
         recyclerView.setAdapter(adapter);
-
-
         mViewModel = new ViewModelProvider(this).get(MyViewModel.class);
         mViewModel.getNewsLiveData();
         mViewModel.getAllNews().observe(this, newsModels -> {
