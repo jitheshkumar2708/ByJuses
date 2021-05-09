@@ -76,21 +76,17 @@ public class MyViewModel extends AndroidViewModel {
             public void onNext(@io.reactivex.rxjava3.annotations.NonNull Root root) {
                 deleteAllNews();
                 for (int i = 0; i < root.getArticles().size(); i++) {
-                    NewsModel newsModel = new NewsModel(root.getArticles().get(i).getAuthor(),
+                    NewsModel newsModel = new NewsModel(root.getArticles().get(i).getSource(),root.getArticles().get(i).getAuthor(),
                             root.getArticles().get(i).getTitle(),
                             root.getArticles().get(i).getDescription(),
                             root.getArticles().get(i).getUrl(),
                             root.getArticles().get(i).getUrlToImage(),
-                            root.getArticles().get(i).getPublishedAt(),
-                            root.getArticles().get(i).getName());
+                            root.getArticles().get(i).getPublishedAt());
 
 
-                    //if(getAllNews() == null) {
-                    //root.getArticles().get(i).setId(i);
+
                     insert(newsModel);
-                    /*} else {
-                        update(newsModel);
-                    }*/
+
 
                 }
 

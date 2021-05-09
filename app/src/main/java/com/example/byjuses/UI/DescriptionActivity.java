@@ -31,6 +31,7 @@ public class DescriptionActivity extends AppCompatActivity {
         String image=getIntent().getStringExtra("ImageUri");
         String descriptionNews = getIntent().getStringExtra("description");
         String dateNews = getIntent().getStringExtra("date");
+        String newsName= getIntent().getStringExtra("newsName");
         Typeface roboto = Typeface.createFromAsset(this.getAssets(),
                 "font/RobotoSlab-Bold.ttf");
         
@@ -49,6 +50,8 @@ public class DescriptionActivity extends AppCompatActivity {
                 into(newsImage);
         newHeadline.setText(title);
         newsDescriptionDate.setText(dateNews);
+        newsTitle.setText(newsName);
+        newsTitle.setTypeface(roboto);
         newsDescrption.setText(descriptionNews);
         arrowBackImage.setClickable(true);
         arrowBackImage.setOnClickListener(v -> supportFinishAfterTransition());

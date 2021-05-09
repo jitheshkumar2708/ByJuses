@@ -8,11 +8,14 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.byjuses.Models.NewsModel;
+import com.example.byjuses.Models.SourceConverter;
 
-@Database(entities = NewsModel.class, version = 1)
+@Database(entities = NewsModel.class, version = 2)
+@TypeConverters(SourceConverter.class)
 public abstract class NewsRoomDB extends RoomDatabase {
 
     private static NewsRoomDB instance;

@@ -58,7 +58,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
         String output = input.substring(0, 10);
         holder.newsDate.setText(output);
         holder.newsTitle.setText(list.get(position).getTitle());
-        holder.newsName.setText("CNN");
+        holder.newsName.setText(list.get(position).getSource().getName());
 
         Typeface roboto = Typeface.createFromAsset(context.getAssets(),
                 "font/RobotoSlab-Regular.ttf");
@@ -81,6 +81,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
             intent.putExtra("title",list.get(position).getTitle());
             intent.putExtra("ImageUri",list.get(position).getUrlToImage());
             intent.putExtra("description",list.get(position).getDescription());
+            intent.putExtra("newsName",list.get(position).getSource().getName());
             intent.putExtra("date",output);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
