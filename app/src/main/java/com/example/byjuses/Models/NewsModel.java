@@ -43,9 +43,8 @@ public class NewsModel {
     private String publishedAt;
 
 
-
-    public NewsModel(Source source,String author, String title, String description, String url, String urlToImage,
-                     String publishedAt ) {
+    public NewsModel(Source source, String author, String title, String description, String url, String urlToImage,
+                     String publishedAt) {
         this.source = source;
         this.author = author;
         this.title = title;

@@ -15,7 +15,7 @@ import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
-public class NewsViewModel  extends ViewModel {
+public class NewsViewModel extends ViewModel {
 
     private static final String TAG = "NewsViewModel";
     MutableLiveData<Root> liveData = new MutableLiveData<>();

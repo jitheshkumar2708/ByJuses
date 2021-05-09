@@ -28,7 +28,6 @@ public class MyViewModel extends AndroidViewModel {
     private LiveData<List<NewsModel>> mAllNews;
 
 
-
     public MyViewModel(@NonNull Application application) {
         super(application);
 
@@ -76,13 +75,12 @@ public class MyViewModel extends AndroidViewModel {
             public void onNext(@io.reactivex.rxjava3.annotations.NonNull Root root) {
                 deleteAllNews();
                 for (int i = 0; i < root.getArticles().size(); i++) {
-                    NewsModel newsModel = new NewsModel(root.getArticles().get(i).getSource(),root.getArticles().get(i).getAuthor(),
+                    NewsModel newsModel = new NewsModel(root.getArticles().get(i).getSource(), root.getArticles().get(i).getAuthor(),
                             root.getArticles().get(i).getTitle(),
                             root.getArticles().get(i).getDescription(),
                             root.getArticles().get(i).getUrl(),
                             root.getArticles().get(i).getUrlToImage(),
                             root.getArticles().get(i).getPublishedAt());
-
 
 
                     insert(newsModel);
@@ -97,7 +95,6 @@ public class MyViewModel extends AndroidViewModel {
             public void onError(@io.reactivex.rxjava3.annotations.NonNull Throwable e) {
                 Log.d(TAG, "onError: " + e.getMessage());
             }
-
 
 
             @Override

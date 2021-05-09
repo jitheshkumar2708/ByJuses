@@ -28,7 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     public class View_Holder extends RecyclerView.ViewHolder {
 
         public View view;
-        public TextView newsDate,newsTitle,newsName;
+        public TextView newsDate, newsTitle, newsName;
         public ImageView newsImage;
 
         public View_Holder(@NonNull View itemView) {
@@ -38,7 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
             newsDate = itemView.findViewById(R.id.date);
             newsTitle = itemView.findViewById(R.id.title);
             newsImage = itemView.findViewById(R.id.image);
-            newsName=  itemView.findViewById(R.id.titleHead);
+            newsName = itemView.findViewById(R.id.titleHead);
 
         }
     }
@@ -78,11 +78,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
         ((View_Holder) holder).view.setOnClickListener(v -> {
 
             Intent intent = new Intent(context, DescriptionActivity.class);
-            intent.putExtra("title",list.get(position).getTitle());
-            intent.putExtra("ImageUri",list.get(position).getUrlToImage());
-            intent.putExtra("description",list.get(position).getDescription());
-            intent.putExtra("newsName",list.get(position).getSource().getName());
-            intent.putExtra("date",output);
+            intent.putExtra("title", list.get(position).getTitle());
+            intent.putExtra("ImageUri", list.get(position).getUrlToImage());
+            intent.putExtra("description", list.get(position).getDescription());
+            intent.putExtra("newsName", list.get(position).getSource().getName());
+            intent.putExtra("date", output);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         });
@@ -96,9 +96,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
         return list.size();
     }
 
-    public List<NewsModel> getArrayList(){
+    public List<NewsModel> getArrayList() {
         return list;
     }
+
     public void setList(List<NewsModel> list, Context context) {
         this.list = list;
         this.context = context;

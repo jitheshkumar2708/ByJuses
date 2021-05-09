@@ -14,7 +14,8 @@ public class SourceConverter {
             return (null);
         }
         Gson gson = new Gson();
-        Type type = new TypeToken<Source>() {}.getType();
+        Type type = new TypeToken<Source>() {
+        }.getType();
         return gson.toJson(source, type);
     }
 
@@ -24,7 +25,8 @@ public class SourceConverter {
             return (null);
         }
         Gson gson = new Gson();
-        Type type = new TypeToken<Source>() {}.getType();
+        Type type = new TypeToken<Source>() {
+        }.getType();
         return gson.fromJson(sourceString, type);
     }
 }

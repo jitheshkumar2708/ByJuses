@@ -5,12 +5,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.TextView;
+
 import com.example.byjuses.Adapter.RecyclerAdapter;
 import com.example.byjuses.MyViewModel;
 import com.example.byjuses.R;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {

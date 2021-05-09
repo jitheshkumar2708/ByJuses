@@ -21,23 +21,23 @@ public class NewsRepository {
         getAllNews = mNewsDao.getAllNews();
     }
 
-    public void insert(NewsModel newsModel){
+    public void insert(NewsModel newsModel) {
         new InsertAsyncTask(mNewsDao).execute(newsModel);
     }
 
-    public void delete(NewsModel newsModel){
+    public void delete(NewsModel newsModel) {
         new DeleteAsyncTask(mNewsDao).execute(newsModel);
     }
 
-    public void update(NewsModel newsModel){
+    public void update(NewsModel newsModel) {
         new UpdateAsyncTask(mNewsDao).execute(newsModel);
     }
 
-    public LiveData<List<NewsModel>> getAllNews(){
+    public LiveData<List<NewsModel>> getAllNews() {
         return getAllNews;
     }
 
-    public void deleteAllNews(){
+    public void deleteAllNews() {
         new DeleteAllNewsAsyncTask(mNewsDao).execute();
     }
 

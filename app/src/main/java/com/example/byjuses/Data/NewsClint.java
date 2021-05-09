@@ -22,7 +22,7 @@ public class NewsClint {
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .build();
 
-        newsInterface =  retrofit.create(NewsInterface.class);
+        newsInterface = retrofit.create(NewsInterface.class);
 
     }
 
@@ -35,7 +35,7 @@ public class NewsClint {
     }
 
 
-    public Observable<Root> GetNews (){
+    public Observable<Root> GetNews() {
         return newsInterface.getNews();
     }
 

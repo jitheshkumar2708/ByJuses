@@ -10,6 +10,7 @@ import androidx.room.Update;
 import com.example.byjuses.Models.NewsModel;
 
 import java.util.List;
+
 @Dao
 public interface NewsDao {
 

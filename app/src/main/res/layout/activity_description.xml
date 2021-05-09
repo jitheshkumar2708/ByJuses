@@ -2,7 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent">
 
     <ImageView
         android:id="@+id/newsImage"
@@ -11,7 +11,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:scaleType="fitXY"
-        android:src="@drawable/byjus"/>
+        android:src="@drawable/byjus" />
 
     <ImageView
         android:id="@+id/arrowImage"
@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/newsImage"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
         android:layout_marginTop="269dp"
+        android:layout_marginRight="24dp"
         android:textColor="@color/colorWhiteLiteDark"
         android:textSize="29sp" />
 
@@ -39,9 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/newsHeadline"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="64dp"
-        android:layout_marginStart="24dp"
         android:textColor="@color/colorWhite" />
 
     <TextView
@@ -53,18 +53,17 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhiteLiteDark"
+        android:layout_marginRight="24dp"
         android:layout_toEndOf="@+id/newsName"
         android:layout_toRightOf="@+id/newsName"
-        android:layout_marginRight="24dp" />
+        android:textColor="@color/colorWhiteLiteDark"
+        android:textSize="20sp" />
 
 
     <TextView
         android:id="@+id/newsDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical"
         android:layout_below="@+id/newsDate"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -77,6 +76,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="12dp"
         android:layout_marginBottom="5dp"
+        android:scrollbars="vertical"
         android:textColor="@color/colorWhiteLite"
         android:textSize="14sp" />
 

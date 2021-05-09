@@ -5,7 +5,6 @@ import android.os.Parcelable;
 
 import androidx.room.ColumnInfo;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Source implements Parcelable {
@@ -19,12 +18,9 @@ public class Source implements Parcelable {
     }
 
 
-
-
     public String getName() {
         return name;
     }
-
 
 
     protected Source(Parcel in) {
